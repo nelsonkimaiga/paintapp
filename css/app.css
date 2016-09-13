@@ -1,9 +1,10 @@
 html,
 body {
     font-family: 'Raleway', serif;
-    color: #666;
+    color: #fff;
     text-align: center;
     background-color: #2b3361;
+    width: 100%;
 }
 
 h1,
@@ -54,15 +55,6 @@ input {
 	margin-bottom: 10px;
 }
 
-
-/*.title {
-	background-color: rgb(30,30,32);
-	padding: 15px;
-	font-size: 100%;
-	color: #62c9c3;
-	box-shadow: 3px 3px 4px 3px rgb(10,5,8);
-	border: 
-}*/
 
 .centerCanvas {
 	width: 850px;
