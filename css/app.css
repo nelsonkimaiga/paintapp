@@ -5,7 +5,15 @@ body {
     text-align: center;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: 'Raleway', serif;
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -47,11 +55,10 @@ input {
 
 
 .title {
-	background-color: rgb(30,30,32);
+	/*background-color: rgb(30,30,32);*/
 	padding: 15px;
-	font-weight: bold;
 	font-size: 100%;
-	color: rgb(220,53,34);
+	color: #62c9c3;
 	box-shadow: 3px 3px 4px 3px rgb(10,5,8);
 	border: 
 }
@@ -86,7 +93,6 @@ input {
 
 .strokeToolbar {
 	margin: 14px 14px;
-	font-weight: bold;
 }
 
 .controlStroke {
