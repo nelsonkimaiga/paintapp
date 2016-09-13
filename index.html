@@ -4,16 +4,69 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Let's Paint!</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+      <div class="container">
+          <div class="title">
+              <h3>Rhapsody-Painter</h3>
+              <div id="colors">
+                  <div class="swatch active" style="background-color: red;"></div>
+                  <div class="swatch" style="background-color: cyan;"></div>
+                  <div class="swatch" style="background-color: yellow;"></div>
+                  <div class="swatch" style="background-color: green;"></div>
+                  <div class="swatch" style="background-color: pink;"></div>
+                  <div class="swatch" style="background-color: purple;"></div>
+                  <div class="swatch" style="background-color: brown;"></div>
+              </div>                  
+          </div>
+          <div class="centerCanvas">
+              <div class="aside">
+                  <div class="strokeToolbar">
+                      STROKE
+                      <span id="strokeVal">10</span>
+                      <div class="controlStroke" id="increaseStroke">+</div>
+                      <div class="controlStroke" id="decreaseStroke" >-</div>                          
+                  </div>
+                  <div class="clearCanvas" id="clearCanvas">
+                      <button class="button alert">CLEAR</button>
+                  </div>
+                  <div class="shapesToolbar">
+                      <button id="shapeMode">SHAPES</button>
+                      <button id="freehandMode">FREEHAND</button>
+                      <select name="shapes" id="shapeSelect">
+                          <option value="circle">Circle</option>
+                          <option value="rectangle">Rectangle</option>
+                          <option value="square">Square</option>
+                      </select>
+                      <!--INPUT FIELDS DEPENDING ON THE SHAPE SELECTED-->
+                      <div>
+                          <input type="text" id="circleRadius" placeholder="Radius">
+                          <input type="text" class="rectangleInput" id="rectangleLength" placeholder="Length">
+                          <input type="text" class="rectangleInput" id="rectangleWidth" placeholder="Width">
+                          <input type="text" id="squareLength" placeholder="Square Length"> 
+                      </div>
+                      <!--LAYERS BUTTONS TO ENABLE TRANSPARENCY-->
+                      <div class="layerStyles">
+                          <button id="layer1Button">1 Layer</button>
+                          <button id="layer2Button">2 Layer</button>
+                          <button id="layer3Button">3 Layer</button>
+                          <button id="layer4Button">4 Layer</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="canvas">
+                  <div class="canvasBackgroundColor"></div>
+                  <canvas id="cvs" class="layers" width="650" height="520" style="z-index: 3;"></canvas>
+                  <canvas id="layer2" class="layers" width="650" height="520" style="z-index: 2;"></canvas>
+                  <canvas id="layer3" class="layers"width="650" height="520" style="z-index: 1;"></canvas>
+                  <canvas id="layer4" class="layers"width="650" height="520" style="z-index: 0;"></canvas>
+              </div>
+          </div>
       </div>
-    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
