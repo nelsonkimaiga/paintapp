@@ -3,6 +3,7 @@ body {
     font-family: 'Raleway', serif;
     color: #666;
     text-align: center;
+    background-color: #2b3361;
 }
 
 h1,
@@ -116,10 +117,9 @@ input {
 	margin: 0 10px;
 }
 
-/*#colors {
-	float: right;
-	margin-top: -30px;
-}*/
+#colors {
+    margin-top: 20px;
+}
 
 .swatch {
 	width: 30px;
